@@ -1,0 +1,27 @@
+{
+  "name": "computer-vision-js",
+  "version": "0.1.0",
+  "description": "Computer Vision Web",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/server/server.js"
+  },
+  "devDependencies": {},
+  "dependencies": {
+    "jsfeat": "^0.0.8"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:bitclaw/computer-vision-js.git"
+  },
+  "keywords": [
+    "es6",
+    "computer-vision"
+  ],
+  "author": "Daniel C. <bitclaw@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bitclaw/computer-vision-js/issues"
+  },
+  "homepage": "https://github.com/bitclaw/computer-vision-js"
+}
