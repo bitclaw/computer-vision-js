@@ -2,12 +2,16 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>chapter1</title>
+    <title>JSFEAT</title>
     <script src="../../node_modules/jsfeat/build/jsfeat.js"></script>
 </head>
 <body>
 
+<canvas id="initCanvas"></canvas>
+
 <script>
+    // create a new matrix with the dimensions of 3 x 3 and an
+    // unsigned byte type with one channel
     var matrix = new jsfeat.matrix_t(3, 3, jsfeat.U8_t | jsfeat.C1_t);
     matrix.data[1] = 1;
     matrix.data[5] = 2;
@@ -16,6 +20,22 @@
         var start = i * matrix.cols;
         console.log(matrix.data.subarray(start, start + matrix.cols));
     }
+    // create a new matrix with the dimensions of 3 x 3 and an
+    // unsigned byte type with one channel
+
+    // Loading an image into a matrix
+    var canvas = document.getElementById('initCanvas'), context = canvas.getContext('2d'),
+        image = new Image();
+    image.src = '../../public/images/banner.jpg';
+
+    image.onload = function () {
+        var cols = image.width;
+        var rows = image.height;
+        canvas.width = cols;
+        canvas.height = rows;
+        context.drawImage(image, 0, 0, image.width, image.height);
+    };
+    // Loading an image into a matrix
 </script>
 </body>
 </html>
